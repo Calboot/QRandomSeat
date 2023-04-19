@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1878</width>
+    <height>514</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>96</width>
+    <height>54</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>943</width>
+    <height>542</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>随机座位生成器</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="mainLayout">
+      <item>
+       <widget class="QTableWidget" name="seatTable">
+        <property name="maximumSize">
+         <size>
+          <width>13520000</width>
+          <height>7100000</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>1352</width>
+          <height>710</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Academy Engraved LET</family>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="gridStyle">
+         <enum>Qt::SolidLine</enum>
+        </property>
+        <property name="rowCount">
+         <number>7</number>
+        </property>
+        <property name="columnCount">
+         <number>7</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>0</number>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>131</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>0</number>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>56</number>
+        </attribute>
+        <attribute name="verticalHeaderHighlightSections">
+         <bool>false</bool>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <item row="0" column="0">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="0" column="1">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="0" column="2">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="0" column="3">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="0" column="4">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="0" column="5">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="0" column="6">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="1" column="0">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="1" column="1">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="1" column="2">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="1" column="3">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="1" column="4">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="1" column="5">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="1" column="6">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="2" column="0">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="2" column="1">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="2" column="2">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="2" column="3">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="2" column="4">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="2" column="5">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="2" column="6">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="3" column="0">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="3" column="1">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="3" column="2">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="3" column="3">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="3" column="4">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="3" column="5">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="3" column="6">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="4" column="0">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="4" column="1">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="4" column="2">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="4" column="3">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="4" column="4">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="4" column="5">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="4" column="6">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="5" column="0">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="5" column="1">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="5" column="2">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="5" column="3">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="5" column="4">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="5" column="5">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="5" column="6">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="6" column="0">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="6" column="1">
+         <property name="text">
+          <string>-</string>
+         </property>
+        </item>
+        <item row="6" column="2">
+         <property name="text">
+          <string>-</string>
+         </property>
+        </item>
+        <item row="6" column="3">
+         <property name="text">
+          <string>undefined</string>
+         </property>
+        </item>
+        <item row="6" column="4">
+         <property name="text">
+          <string>-</string>
+         </property>
+        </item>
+        <item row="6" column="5">
+         <property name="text">
+          <string>-</string>
+         </property>
+        </item>
+        <item row="6" column="6">
+         <property name="text">
+          <string>-</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="buttonGroup">
+        <property name="title">
+         <string/>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="generateButton">
+           <property name="text">
+            <string>生成</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="exportButton">
+           <property name="text">
+            <string>导出为HTML...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="configLayout">
+      <property name="spacing">
+       <number>-1</number>
+      </property>
+      <item row="2" column="0">
+       <widget class="QLabel" name="volumn_3_4_label">
+        <property name="text">
+         <string>3～4排</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="volumn_5_7_input"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="volumn_5_7_label">
+        <property name="text">
+         <string>5～7排</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="masterListInput"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="masterListLabel">
+        <property name="text">
+         <string>组长</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QPushButton" name="generateRandomSeed">
+        <property name="text">
+         <string>随机生成</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QTextEdit" name="seperateInput"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="configLabel">
+        <property name="text">
+         <string>配置文件</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="volumn_1_2_input"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="fillInDefault_3_4">
+        <property name="text">
+         <string>添入默认</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="configPath">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QPushButton" name="fillInDefaultMasters">
+        <property name="text">
+         <string>添入默认</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="fillInDefault_5_7">
+        <property name="text">
+         <string>添入默认</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="seedLabel">
+        <property name="text">
+         <string>种子</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="seperateLabel">
+        <property name="text">
+         <string>分开</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="volumn_3_4_input"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="volumn_1_2_label">
+        <property name="text">
+         <string>1～2排</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="selectConfigButton">
+        <property name="text">
+         <string>选择...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="seedInput"/>
+      </item>
+      <item row="6" column="2">
+       <widget class="QPushButton" name="fillInDefaultSeperate">
+        <property name="text">
+         <string>添入默认</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="fillInDefault_1_2">
+        <property name="text">
+         <string>添入默认</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1878</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="File">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <widget class="QMenu" name="exportMenu">
+     <property name="title">
+      <string>导出</string>
+     </property>
+     <addaction name="exportAsHTML"/>
+     <addaction name="exportAsCSV"/>
+    </widget>
+    <addaction name="selectConfig"/>
+    <addaction name="exportMenu"/>
+   </widget>
+   <widget class="QMenu" name="window">
+    <property name="title">
+     <string>窗口</string>
+    </property>
+    <addaction name="fullScreen"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="generateAction"/>
+   </widget>
+   <addaction name="File"/>
+   <addaction name="menu"/>
+   <addaction name="window"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="exportAsCSV">
+   <property name="text">
+    <string>CSV</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="exportAsHTML">
+   <property name="text">
+    <string>HTML</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="selectConfig">
+   <property name="text">
+    <string>选择配置文件...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="fullScreen">
+   <property name="text">
+    <string>进入全屏幕</string>
+   </property>
+   <property name="shortcut">
+    <string>Meta+Ctrl+F</string>
+   </property>
+  </action>
+  <action name="generateAction">
+   <property name="text">
+    <string>生成</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
