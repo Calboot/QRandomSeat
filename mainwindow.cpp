@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <iostream>
 #include <cstdlib>
+#include <random>
 #define fu(x) for(int i=0;i<x;i++)
 #define fd(y) for(int i=y;i>0;i--)
 #define wh(b) while(b)
@@ -17,7 +18,8 @@ QString defaultSeperates="2 4\n2 5\n4 5\n1 39\n2 39\n3 39\n4 39\n5 39\n6 39\n7 3
 int seed;
 
 void randomArray(QString s[],int len,int seed=time(0)){
-    srand(seed);
+    default_random_engine e;
+    e.seed(seed);
 
     bool b[len];
     QString t[len];
@@ -30,7 +32,7 @@ void randomArray(QString s[],int len,int seed=time(0)){
 
     fu(len){
         do{
-            tmp=rand()%len;
+            tmp=e()%len;
         }wh(b[tmp]);
         t[i]=s[tmp];
         b[tmp]=true;
@@ -96,6 +98,8 @@ bool isSeperated(QString seat[7][7],QString a,QString b){
 
 void MainWindow::on_generateButton_clicked()
 {
+    default_random_engine e;
+
     //load config
     string srow1_2=ui->volumn_1_2_input->text().toStdString();
     char crow1_2[128];
@@ -107,22 +111,33 @@ void MainWindow::on_generateButton_clicked()
     char crow5_7[128];
     strcpy(crow5_7,srow5_7.c_str());
     seed=ui->seedInput->text().toInt();
+    e.seed(seed);
     //init arrays
-    char *p;
     QString row1_2[14];
-    fu(14){
-        row1_2[i]=ui->seatTable->item(i/7,i%7)->text();
-    }
     QString row3_4[14];
-    fu(14){
-        row3_4[i]=ui->seatTable->item(i/7+2,i%7)->text();
-    }
     QString row5_7[16];
+    char *p;
+    p=strtok(crow1_2," ");
     fu(14){
-        row5_7[i]=ui->seatTable->item(i/7+4,i%7)->text();
+        row1_2[i]=p;
+        if(p){
+            p=strtok(NULL," ");
+        }
     }
-    row5_7[14]=ui->seatTable->item(6,0)->text();
-    row5_7[15]=ui->seatTable->item(6,3)->text();
+    p=strtok(crow3_4," ");
+    fu(14){
+        row3_4[i]=p;
+        if(p){
+            p=strtok(NULL," ");
+        }
+    }
+    p=strtok(crow5_7," ");
+    fu(16){
+        row5_7[i]=p;
+        if(p){
+            p=strtok(NULL," ");
+        }
+    }
     do{
         //generate seat
         randomArray(row1_2,14,seed);
@@ -143,19 +158,19 @@ void MainWindow::on_generateButton_clicked()
     }wh(isElegible(row1_2,row3_4,row5_7));
     srand(seed);
     int t;
-    t=rand()%7;
+    t=e()%7;
     ui->seatTable->item(t,0)->setText("*"+ui->seatTable->item(t,0)->text()+"*");
-    t=rand()%6;
+    t=e()%6;
     ui->seatTable->item(t,1)->setText("*"+ui->seatTable->item(t,1)->text()+"*");
-    t=rand()%6;
+    t=e()%6;
     ui->seatTable->item(t,2)->setText("*"+ui->seatTable->item(t,2)->text()+"*");
-    t=rand()%7;
+    t=e()%7;
     ui->seatTable->item(t,3)->setText("*"+ui->seatTable->item(t,3)->text()+"*");
-    t=rand()%6;
+    t=e()%6;
     ui->seatTable->item(t,4)->setText("*"+ui->seatTable->item(t,4)->text()+"*");
-    t=rand()%6;
+    t=e()%6;
     ui->seatTable->item(t,5)->setText("*"+ui->seatTable->item(t,5)->text()+"*");
-    t=rand()%6;
+    t=e()%6;
     ui->seatTable->item(t,6)->setText("*"+ui->seatTable->item(t,6)->text()+"*");
 
 }
