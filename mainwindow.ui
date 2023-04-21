@@ -45,7 +45,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Academy Engraved LET</family>
+          <family>Arial</family>
           <pointsize>18</pointsize>
          </font>
         </property>
@@ -385,30 +385,10 @@
       <property name="spacing">
        <number>-1</number>
       </property>
-      <item row="2" column="0">
-       <widget class="QLabel" name="volumn_3_4_label">
-        <property name="text">
-         <string>3～4排</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="QLineEdit" name="volumn_5_7_input"/>
-      </item>
       <item row="3" column="0">
        <widget class="QLabel" name="volumn_5_7_label">
         <property name="text">
          <string>5～7排</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="1">
-       <widget class="QLineEdit" name="masterListInput"/>
-      </item>
-      <item row="4" column="0">
-       <widget class="QLabel" name="masterListLabel">
-        <property name="text">
-         <string>组长</string>
         </property>
        </widget>
       </item>
@@ -419,40 +399,61 @@
         </property>
        </widget>
       </item>
-      <item row="6" column="1">
-       <widget class="QTextEdit" name="seperateInput"/>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="configLabel">
-        <property name="text">
-         <string>配置文件</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLineEdit" name="volumn_1_2_input"/>
-      </item>
-      <item row="2" column="2">
-       <widget class="QPushButton" name="fillInDefault_3_4">
+      <item row="1" column="2">
+       <widget class="QPushButton" name="fillInDefault_1_2">
         <property name="text">
          <string>添入默认</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="configPath">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="readOnly">
-         <bool>true</bool>
         </property>
        </widget>
       </item>
       <item row="4" column="2">
-       <widget class="QPushButton" name="fillInDefaultMasters">
+       <widget class="QPushButton" name="fillInDefaultGroupLeaders">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
          <string>添入默认</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="volumn_3_4_input"/>
+      </item>
+      <item row="6" column="1">
+       <widget class="QTextEdit" name="seperateInput">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="volumn_1_2_label">
+        <property name="text">
+         <string>1～2排</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="seperateLabel">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>分开</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="groupLeaderListInput">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="volumn_3_4_label">
+        <property name="text">
+         <string>3～4排</string>
         </property>
        </widget>
       </item>
@@ -463,6 +464,52 @@
         </property>
        </widget>
       </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="volumn_5_7_input"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="volumn_1_2_input"/>
+      </item>
+      <item row="6" column="2">
+       <widget class="QPushButton" name="fillInDefaultSeperate">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>添入默认</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="seedInput"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="configLabel">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>配置文件</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="fillInDefault_3_4">
+        <property name="text">
+         <string>添入默认</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="selectConfigButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>选择...</string>
+        </property>
+       </widget>
+      </item>
       <item row="5" column="0">
        <widget class="QLabel" name="seedLabel">
         <property name="text">
@@ -470,44 +517,23 @@
         </property>
        </widget>
       </item>
-      <item row="6" column="0">
-       <widget class="QLabel" name="seperateLabel">
+      <item row="4" column="0">
+       <widget class="QLabel" name="groupLeaderListLabel">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
-         <string>分开</string>
+         <string>组长</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
-       <widget class="QLineEdit" name="volumn_3_4_input"/>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="volumn_1_2_label">
-        <property name="text">
-         <string>1～2排</string>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="configPath">
+        <property name="enabled">
+         <bool>false</bool>
         </property>
-       </widget>
-      </item>
-      <item row="0" column="2">
-       <widget class="QPushButton" name="selectConfigButton">
-        <property name="text">
-         <string>选择...</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="1">
-       <widget class="QLineEdit" name="seedInput"/>
-      </item>
-      <item row="6" column="2">
-       <widget class="QPushButton" name="fillInDefaultSeperate">
-        <property name="text">
-         <string>添入默认</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QPushButton" name="fillInDefault_1_2">
-        <property name="text">
-         <string>添入默认</string>
+        <property name="readOnly">
+         <bool>true</bool>
         </property>
        </widget>
       </item>

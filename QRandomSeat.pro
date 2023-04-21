@@ -3,6 +3,7 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
+CONFIG += sdk_no_version_check
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -13,8 +14,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
-    mainwindow.h \
-    tools.h
+    mainwindow.h
 
 FORMS += \
     mainwindow.ui
