@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <random>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,6 +15,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    std::default_random_engine e;
 
 private slots:
     void on_generateButton_clicked();
@@ -35,14 +37,16 @@ private slots:
     void on_fillInDefault_5_7_clicked();
 
     void on_generateAction_triggered();
-
-    void on_fillInDefaultMasters_clicked();
+    
+    void on_fillInDefaultGroupLeaders_clicked();
 
     void on_generateRandomSeed_clicked();
 
     void on_fillInDefaultSeperate_clicked();
 
     void on_selectConfigButton_clicked();
+
+    void on_fillDefault_triggered();
 
 private:
     Ui::MainWindow *ui;
