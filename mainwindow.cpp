@@ -51,10 +51,7 @@ bool isSeperated(QTableWidget *seat,QList<QString> qs){
         b=seat->findItems(qs.at((i+1)*2),Qt::MatchFlags::fromInt(0)).constFirst();
         indexOfA=seat->indexFromItem(a);
         indexOfB=seat->indexFromItem(b);
-        if((indexOfA.row()-indexOfB.row()==1||indexOfA.row()-indexOfB.row()==-1)&&indexOfA.column()==indexOfB.column()){
-            return false;
-        }
-        if((indexOfA.column()-indexOfB.column()==1||indexOfA.column()-indexOfB.column()==-1)&&indexOfA.row()==indexOfB.row()){
+        if(indexOfA.row()-indexOfB.row()<=1&&indexOfA.row()-indexOfB.row()>=-1&&indexOfA.column()-indexOfB.column()<=1&&indexOfA.column()-indexOfB.column()>=-1){
             return false;
         }
     }
@@ -119,22 +116,22 @@ void MainWindow::on_generateButton_clicked()
         on_generateRandomSeed_clicked();
     }
     //load config
-    string srow1_2=ui->volumn_1_2_input->text().toStdString();
     char crow1_2[128];
-    strcpy(crow1_2,srow1_2.c_str());
-    string srow3_4=ui->volumn_3_4_input->text().toStdString();
+    strcpy(crow1_2,ui->volumn_1_2_input->text().toStdString().c_str());
     char crow3_4[128];
-    strcpy(crow3_4,srow3_4.c_str());
-    string srow5_7=ui->volumn_5_7_input->text().toStdString();
+    strcpy(crow3_4,ui->volumn_3_4_input->text().toStdString().c_str());
     char crow5_7[128];
-    strcpy(crow5_7,srow5_7.c_str());
+    strcpy(crow5_7,ui->volumn_5_7_input->text().toStdString().c_str());
     string sseperates=ui->seperateInput->toPlainText().toStdString();
+    char cgl[128];
+    strcpy(cgl,ui->groupLeaderListInput->text().toStdString().c_str());
     seed=ui->seedInput->text().toLongLong();
     e.seed(seed);
     //init arrays
     QString row1_2[14];
     QString row3_4[14];
     QString row5_7[16];
+    QList<QString> gl;
     char *p;
     p=strtok(crow1_2," ");
     fu(14){
@@ -157,6 +154,14 @@ void MainWindow::on_generateButton_clicked()
             p=strtok(NULL," ");
         }
     }
+    string ts;
+    p=strtok(cgl," ");
+    while(p!=nullptr){
+        ts=*p;
+        gl.append(QString::fromStdString(ts));
+        p=strtok(NULL," ");
+    }
+
     do{
         //generate seat
         randomArray(row1_2,14,e());

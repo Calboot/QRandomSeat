@@ -616,7 +616,7 @@
     <string>进入全屏幕</string>
    </property>
    <property name="shortcut">
-    <string>Meta+Ctrl+F</string>
+    <string>Alt+F</string>
    </property>
   </action>
   <action name="generateAction">
